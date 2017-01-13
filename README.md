@@ -29,6 +29,13 @@ function	| fn\_get\_data\_id	| select fn\_get\_data\_id from dual
 Line 4: data
 
 ## Example
+1. COLUMN_TYPE config contain 'function'  
 ```
-INSERT TB_USER (USER_ID, NAME, AGE, EMAIL, ADDRESS, SCORE, BIRTHDAY, DATA_ID ) SELECT 'golden_three_fat', '金三胖', 28, 'rzh0001@qq.com', 'Nanjing', 12.1, '19900416', fn_get_data_id FROM DUAL;
+INSERT TB_USER (USER_ID, NAME, AGE, EMAIL, ADDRESS, SCORE, BIRTHDAY, DATA_ID )  
+SELECT 'golden_three_fat', '金三胖', 28, 'rzh0001@qq.com', 'Nanjing', 12.1, '19900416', fn_get_data_id FROM DUAL;
+```
+2. COLUMN_TYPE config do not contain 'function'
+```
+INSERT TB_USER (USER_ID, NAME, AGE, EMAIL, ADDRESS, SCORE, BIRTHDAY )   
+VALUES ('golden_three_fat', '金三胖', 28, 'rzh0001@qq.com', 'Nanjing', 12.1, '19900416' );
 ```
